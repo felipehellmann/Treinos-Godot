@@ -14,12 +14,12 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		jumps -= 1
+		jumps = 2
 
 	# double jump \ pulo duplo moleque hehehe
-	if Input.is_action_just_pressed("ui_accept") and not is_on_floor() and jumps < 2:
+	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
 		velocity.y = JUMP_VELOCITY
-		jumps = 2
+		jumps -= 1
 
 
 

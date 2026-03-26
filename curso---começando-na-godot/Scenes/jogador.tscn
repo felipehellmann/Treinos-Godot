@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1t8tbia6s8qu"]
+
+[ext_resource type="Texture2D" uid="uid://b2gk6ipnlrjpg" path="res://assets/mago.png" id="1_k6dqt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w43nc"]
+radius = 86.05231
+
+[node name="Jogador" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_k6dqt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_w43nc")
